@@ -73,11 +73,14 @@ textarea {
   transform: translateX(-50%);
   border: 2px solid rgb(0, 0, 0)c;
 }
+body{
+     background-color: rgb(252, 246, 216);
+     }
     </style>
 <body>
     
 <div class="container">
-  <form action="formSubmit.php" method="post">
+  <form action= fs.writeFile method="post">
     <ul>
       <li>
         <label for="name">Name:</label>
@@ -91,5 +94,20 @@ textarea {
     <button class="button" button id="submitBirthday">Submit Birthday</button>
   </form>
 </div>
+<script> 
+  // Requiring fs module in which 
+  // writeFile function is defined. 
+  const fs = require('fs') 
+    
+  // Data which will write in a file. 
+  let data = "Learning how to write in a file."
+    
+  // Write data in 'Output.txt' . 
+  fs.writeFile('birthdayList.txt', data, (err) => { 
+        
+      // In case of a error throw err. 
+      if (err) throw err; 
+  }) 
+  </script> 
 </body>
 </html>
