@@ -1,4 +1,4 @@
-document.getElementById("container").addEventListener("open", sortBirthdays());
+document.getElementById("container").addEventListener('click', sortBirthdays());
 function sortBirthdays(){
 var names = [];
 var birthdays = [];

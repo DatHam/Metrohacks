@@ -1,4 +1,4 @@
-document.getElementById("myForm").addEventListener("submit", saveFile(), fs.appendFile());
+document.getElementById("myForm").addEventListener("submit", saveFile());
 function saveFile(){
 
     const username = document.getElementById('name');
@@ -9,12 +9,5 @@ function saveFile(){
     'Birthday: ' +birthday.value + ' \r\n '
 
     var blob = new Blob([data], { type: 'text/plain' });
-    
     saveAs(blob, "birthdayList.txt");
 }
-const fs = require('fs');
-
-fs.appendFile('birthdayList.txt', blob, function (err) {
-  if (err) throw err;
-  console.log('Saved!');
-});
