@@ -78,36 +78,23 @@ body{
      }
     </style>
 <body>
-    
 <div class="container">
-  <form action= fs.writeFile method="post">
+  <form onSubmit="createFile()"> 
     <ul>
       <li>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name">
+        <input type="text" id="name" name="user_name" placeholder="username">
       </li>
       <li>
         <label for="msg">Birthday:</label>
-        <input type="date" data-date-inline-picker="true" id="birthday" name="user_birthday"/>
+        <input type="date" data-date-inline-picker="true" id="birthday" username="user_birthday"/>
       </li>
     </ul>
-    <button class="button" button id="submitBirthday">Submit Birthday</button>
+    <button class="button" type="submit" onclick="Generate()">Submit Birthday</button>
   </form>
 </div>
-<script> 
-  // Requiring fs module in which 
-  // writeFile function is defined. 
-  const fs = require('fs') 
-    
-  // Data which will write in a file. 
-  let data = "Learning how to write in a file."
-    
-  // Write data in 'Output.txt' . 
-  fs.writeFile('birthdayList.txt', data, (err) => { 
-        
-      // In case of a error throw err. 
-      if (err) throw err; 
-  }) 
-  </script> 
-</body>
+
+<script src="FileSaver.js"></script>
+<script src="FormInput.js"></script>
 </html>
+
