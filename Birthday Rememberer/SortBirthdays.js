@@ -73,7 +73,10 @@ var finalText = "";
 for(var i = 0; i < lines.length; i++) {
     finalText += sortedProfiles[i].name;
     finalText += ": ";
-    finalText += sortedProfiles[i].month;
+    if(sortedProfiles[i].month < 9) {
+        finalText += 0;
+    }
+    finalText += (sortedProfiles[i].month + 1);
     finalText += "/";
     finalText += sortedProfiles[i].day;
     finalText += "/";
