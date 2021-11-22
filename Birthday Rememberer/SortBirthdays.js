@@ -1,3 +1,5 @@
+document.getElementById("container").addEventListener("open", sortBirthdays());
+function sortBirthdays(){
 var names = [];
 var birthdays = [];
 var dates = [];
@@ -81,3 +83,4 @@ for(var i = 0; i < lines.length; i++) {
 
 
 fs.writeFileSync('Birthday Rememberer\\sortedBirthdayList.txt', finalText);
+}
