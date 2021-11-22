@@ -3,7 +3,7 @@
 	"name": "Birthday Rememberer",
 	"description": "Remembers birthdays for you",
 	"version":"1.0",
-	"content_security_policy": "script-src 'self' 'sha256-WOdSzz11/3cpqOdrm89LBL2UPwEU9EhbDtMy2OciEhs='",
+	"content_security_policy": "script-src 'self' script-src: 'self' 'unsafe-inline'",
 	"browser_action": {
 		"default_icon": "icon.png",
 		"default_popup": "popup.html"
