@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 John Smith: 01/01/2000
 Sam Bederman: 01/06/2005
 Alan Zhou: 03/15/2005
 August Birthday: 08/03/1324
 Birthday Boy: 11/21/2021
 Other Birthday: 11/24/2021
->>>>>>> abe52772c16256ba37e23d9d47d3700e5dd0fea8
