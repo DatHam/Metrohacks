@@ -66,3 +66,18 @@ for(var i = index; i < lines.length; i++) {
 for(var i = 0; i < index; i++) {
     sortedProfiles[i + (lines.length - index)] = profiles[i];
 }
+
+var finalText = "";
+for(var i = 0; i < lines.length; i++) {
+    finalText += sortedProfiles[i].name;
+    finalText += ": ";
+    finalText += sortedProfiles[i].month;
+    finalText += "/";
+    finalText += sortedProfiles[i].day;
+    finalText += "/";
+    finalText += sortedProfiles[i].year;
+    finalText += "\n";
+}
+
+
+fs.writeFileSync('Birthday Rememberer\\sortedBirthdayList.txt', finalText);
