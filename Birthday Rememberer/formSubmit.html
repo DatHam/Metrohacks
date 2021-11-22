@@ -82,18 +82,18 @@ body{
     </style>
 <body>
 <div class="container">
-  <form onSubmit="createFile()"> 
+  <form onsubmit="saveFile() "> 
     <ul>
       <li>
      <!--   <label style="font-size: 32px;" for="name">Name:</label> -->
-        <input type="text" id="name" name="user_name" placeholder="username">
+        <input type="text" id="name" name="user_name" placeholder="birthday name">
       </li>
       <li>
        <!-- <label style="font-size: 32px;" for="msg">Birthday:</label> -->
-        <input type="date" data-date-inline-picker="true" id="birthday" username="user_birthday"/>
+        <input type="date" data-date-inline-picker="true" id="birthday" name="birthday" username="user_birthday"/>
       </li>
     </ul>
-    <button class="button" type="submit" onclick="Generate()">Submit Birthday</button>
+    <button class="button" type="submit" >Submit Birthday</button>
   </form>
 </div>
 

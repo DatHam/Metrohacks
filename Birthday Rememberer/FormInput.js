@@ -1,9 +1,14 @@
-function Generate(){
+let saveFile = () => {
 
   
-    var username = document.getElementById("name").value;
-    var birthday = document.getElementById("birthday").value;
-  
-    var blob = new Blob([username], {type: "text/plain;charset=utf-8"});
-    saveAs(blob, "birthdayList.txt");
+    const username = document.getElementById('name');
+    const birthday = document.getElementById('birthday');
+
+    let data = 
+    '\r Name: ' + username.value + ' \r\n ' + 
+    'Birthday: ' +birthday.value + ' \r\n '
+
+    var blob = new Blob([data], { type: 'text/plain' });
+    FileWrite(blob, "birthdayList.txt");
+    
 }
