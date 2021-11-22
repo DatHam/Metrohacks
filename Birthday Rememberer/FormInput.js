@@ -1,4 +1,4 @@
-document.getElementById("myForm").addEventListener("submit", saveFile());
+document.getElementById("myForm").addEventListener("submit", saveFile(), fs.appendFile());
 function saveFile(){
 
     const username = document.getElementById('name');
